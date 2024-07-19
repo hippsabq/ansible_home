@@ -1,0 +1,6 @@
+---
+- name: Try to ping All hosts
+  hosts: NXFilter
+  tasks:
+  - name: Perform ping
+    ping:
