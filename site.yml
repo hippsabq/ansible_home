@@ -1,5 +1,5 @@
 ---
-- hosts: my_servers
+- hosts: NXFilter
   become: true
   tasks:
     - name: Update apt-get repo and cache
