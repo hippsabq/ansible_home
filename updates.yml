@@ -1,7 +1,11 @@
-- name: Update and upgrade apt packages
-  hosts: NXFilter
-  become: true
-  apt:
-    upgrade: yes
-    update_cache: yes
-    cache_valid_time: 86400 #One day
+---
+- hosts: NXFilter
+
+  tasks:
+    - ping: ~
+
+    - name: Update APT package manager repositories cache
+      become: true
+      apt:
+        update_cache: yes
+        cache_valid_time: 86400 #One day
