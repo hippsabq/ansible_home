@@ -1,8 +1,10 @@
 ---
-- hosts: all
-
+- name: Restart Motioneye
+  hosts: all
+  become: true
   tasks:
     - name: Restart service motioneye, in all cases
-      service:
-        name: motioneye.service
+      ansible.builtin.service:
+        name: motioneye
         state: restarted
+        sleep: 5
