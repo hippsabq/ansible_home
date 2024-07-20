@@ -4,5 +4,5 @@
   tasks:
     - name: Restart service motioneye, in all cases
       service:
-        name: motioneye
+        name: motioneye.service
         state: restarted
