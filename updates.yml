@@ -1,5 +1,5 @@
 - name: Update and upgrade apt packages
-  hosts:NXFilter
+  hosts: NXFilter
   become: true
   apt:
     upgrade: yes
