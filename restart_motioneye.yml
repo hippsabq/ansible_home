@@ -1,4 +1,8 @@
-- name: Restart service httpd, in all cases
-  ansible.builtin.service:
-    name: motioneye
-    state: restarted
+---
+- hosts: all
+
+  tasks:
+    - name: Restart service motioneye, in all cases
+    ansible.builtin.service:
+      name: motioneye
+      state: restarted
